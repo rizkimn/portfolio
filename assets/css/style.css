@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'arial', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,li {
+    list-style: none;
+}
+
+body, main,
+.right .content,
+section.left .hero-img {
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+main section{
+    width: 50%;
+    height: 100vh;
+}
+
+main .left {
+    background: #fff;
+    position: relative;
+    z-index: 666;
+}
+
+section.left .hero {
+    transition: .3s linear;
+}
+
+/* section.left .hero:hover {
+    transform: translateY(-50%);
+} */
+
+section.left .hero img {
+    height: 100vh;
+    transform: scale(1.2);
+}
+
+section.left .hero img.soc-med {
+    transform: scale(1.5);
+}
+
+main .right {
+    /* background: #3d3c3c; */
+    display: flex;
+    flex-direction: column;
+    padding: 50px 100px;
+}
+
+section.right nav {
+    width: 100%;
+    position: relative;
+}
+
+section.right nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+section.right nav li {
+    letter-spacing: 1px;
+    color: #d32aae;
+    cursor: default;
+    opacity: .3;
+    transition: .3s;
+}
+
+section.right nav li:hover,
+section.right nav li.active {
+    opacity: 1;
+}
+
+section.right nav span.underline::before,
+section.right nav span.underline {
+    display: inline-block;
+    height: 2px;
+    width: 100%;
+    background: #2a8fd325;
+    transition: .3s;
+}
+
+section.right nav span.underline::before {
+    content: '';
+    width: 50%;
+    background: #2a8fd3;
+    position: absolute;
+}
+
+section.right nav span.underline.where::before {
+    transform: translateX(100%);
+}
+
+.right .content {
+    display: flex;
+    width: 200%;
+    margin-top: 50px;
+    transition: .3s linear;
+}
+
+.content .typography {
+    width: 100%;
+    overflow: auto;
+    transform: scale(1);
+    opacity: 1;
+    transition: .3s linear;
+}
+
+.content .typography.where {
+    transform: scale(.5);
+    opacity: 0;
+}
+
+.typography p {
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+.typography span {
+    display: inline-block;
+    font-family: serif;
+    font-size:  3.5em;
+    /* font-weight: 500; */
+}
+
+.typography small {
+    display: block;
+    margin-top: 12px;
+    font-size: .95em;
+    letter-spacing: 1px;
+}
+
+.typography.where small ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.typography.where small li a {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.typography.where small li.instagram a {
+    color: #b12ad3;
+}
+
+.typography.where small li.facebook a {
+    color: #2a81d3;
+}
+
+.typography.where small li.whatsapp a {
+    color: #34bb13;
+}
+
+
+
+
+
+@media screen and (max-width: 812px) and (max-height: 480px)  {
+    main .right {
+        padding: 30px;
+    }
+
+    .right .content {
+        margin-top: 25px;
+    }
+
+    .typography p {
+        font-size: 1.5em;
+        letter-spacing: 1.5px;
+    }
+    
+    .typography span {
+        display: inline-block;
+        font-family: serif;
+        font-size:  3em;
+        /* font-weight: 500; */
+    }
+    
+    .typography small {
+        display: block;
+        margin-top: 8px;
+        font-size: .8em;
+        letter-spacing: 1px;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 478px) {
+    main {
+        flex-direction: column;
+    }
+
+    main section{
+        width: 100vw;
+        height: 50vh;
+        overflow: hidden;
+    }
+
+    section.left .hero img {
+        width: 100vw;
+        height: auto;
+        transform: scale(1.2);
+    }
+
+    section.left .hero img.soc-med {
+        transform: translateX(-15%) scale(1.2);
+    }
+
+    main .right {
+        padding: 30px;
+    }
+
+    .right .content {
+        margin-top: 30px;
+    }
+
+    .typography p {
+        font-size: 1.5em;
+        letter-spacing: 1px;
+    }
+    
+    .typography span {
+        display: inline-block;
+        font-family: serif;
+        font-size:  3em;
+        /* font-weight: 500; */
+    }
+    
+    .typography small {
+        display: block;
+        margin-top: 15px;
+        font-size: .9em;
+        letter-spacing: 1px;
+    }
+}
